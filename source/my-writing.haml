@@ -1,0 +1,40 @@
+---
+title: My Writing
+description: Nice to meet you, but I imagine you'd like to see some writing.
+---
+
+%section.hero
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %h1= data.writing_page.headline
+
+      %div.section.separator-top
+
+        %p.p--intro= data.writing_page.intro
+
+        %div.container
+          %div.span-5
+            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#learnmore"}= data.writing_page.more_btn
+
+- writing_examples = data.writing_examples.select{|id, cs| cs.type == 'case_study' }
+- writing_examples.sort_by{|id, cs| cs.date }.each do |id, writing|
+  - unless environment == :build && !writing.published
+    %section.section.container.separator-bottom.padding-bottom-none.margin-bottom-60.case-study
+      %div.container.container--medium.text-center#learnmore
+        %h2= writing.project
+        %p.p--intro= writing.intro
+        = link_to 'Read more', "/my-writing/#{id.dasherize}", class: 'btn btn--primary'
+
+        - if writing.preview_type == 'website'
+          %div.section.padding-bottom-none.browser-wrapper
+            %div.browser.browser--small
+              = link_to "/my-writing/#{id.dasherize}" do
+                = image_tag writing.image
+
+        - elsif writing.preview_type == 'notepad'
+          %div.section.padding-bottom-none.browser-wrapper
+            %div.browser.browser--small.browser--iphone.margin-auto
+              = link_to "/my-writing/#{id.dasherize}" do
+                = image_tag writing.image
+
+= partial "layouts/partials/contact-me-cta"

@@ -42,7 +42,8 @@
         %strong Skills
         %em= role.skills
     %div.container.container--vsmall.container--left
-      =simple_format role.body
+      - role.body.each do |paragraph|
+        =simple_format paragraph
 
 
 - if current_index+1 < data.cv.roles.length

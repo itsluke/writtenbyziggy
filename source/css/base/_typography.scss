@@ -110,13 +110,14 @@ h6, .h6 {
 
 p {
   line-height: $base-line-height;
-  margin-bottom: 1rem;
+  margin-bottom: 2.4rem;
   margin-top: 0.5rem;
 }
 
-p + p {
-  @include rem(text-indent, 2.4rem);
-}
+// p + p {
+//   @include rem(text-indent, 2.4rem);
+//   margin-bottom: 3m;
+// }
 
 article {
   a {

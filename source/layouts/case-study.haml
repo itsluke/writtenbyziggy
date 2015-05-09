@@ -1,0 +1,18 @@
+- project_id = current_page.url.gsub('/', '').gsub('my-writing', '').underscore
+- project = data.writing_examples["#{project_id}"]
+
+- content_for(:title, project.meta_title)
+- content_for(:meta_description, project.meta_description)
+- content_for(:og_image, project.og_image)
+
+= wrap_layout :layout do
+  %section.hero.hero--fixed-height
+    %div.fixed--bottom
+      %div.section.container.padding-bottom-none
+        %h1.margin-bottom-none= project.project
+        %h6.section.margin-bottom-none.padding-top-none= project.project_type
+      %div.section.separator-top.padding-bottom-none
+
+  = yield
+
+  = partial "layouts/partials/contact-me-cta"

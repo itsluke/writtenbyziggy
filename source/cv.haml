@@ -1,15 +1,16 @@
 ---
-title: Ziggy Bracey | Curriculum Vitae
+title: Curriculum Vitae
 description: Hi nice to meet you, I'm Ziggy and this is what I've been working on.
+
 ---
-%section.hero
+%section.hero.hero--fixed-height
   %div.fixed--bottom
     %div.section.container.padding-bottom-none
-      %h1 If it's a challenge I'm happy
+      %h1= data.cv_page.headline
 
       %div.section.separator-top
 
-        %p.p--intro Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec para/doca illi, nos admirabilia dicamus. At iam decimum annum in spelunca iacet. Duo Reges: constructio interrete. Quod non faceret, si in voluptate summum bonum poneret.
+        %p.p--intro= data.cv_page.intro
 
         %div.container
           %div.span-5

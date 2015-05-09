@@ -9,22 +9,26 @@ roles:
     date_range: September 2014 – Present
 
     position: Copywriter & Product Development
-    skills: Copywriting, Reviewer, Trend Analysis, Product Managment, Research
+    skills: |
+      Copywriting, Content Strategy, Trend Analysis, Product Management, Research, User Profiling, Newsletter Campaign, Managing 3rd Parties, Event Planning, Proof-reading
     small_image: role/foodit.png
     meta_title: "FOODit | Ziggy Bracey"
     intro: |
-      I joined the FOODit team as employee #8 and have been working hard with them to define tone of voice, devise their newsletter strategy and help launch Central Dish.
-    body: |
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Re mihi non aeque satisfacit, et quidem locis pluribus. At multis malis affectus. Duo Reges: constructio interrete. Quo modo autem optimum, si bonum praeterea nullum est? Quid, quod res alia tota est? Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico?
-
-    google_plus: https://plus.google.com/115074148252317999654
+      I joined the FOODit team as employee #8 and have been working hard with them to define product voice, devise their newsletter and content strategy and help launch Central Dish.
+    body:
+      - |
+        CentralDish is an exciting, new restaurant marketplace that helps users find their perfect dish, whenever and wherever they are.
+      - |
+        A big part of my job has been definining the needs of these users so that we can deliver the kind of information they couldn't get elsewhere, all in ways that are accessable and engaging.
+      - |
+        With such a large potential userbase, I've been involved in leading research and interviews with people and restaurants at all levels. This has helped us hone our USPs and delevop our strategy.
     twitter: "@fooditfood"
 
   -
     slug: paulo-giannis
     name: Paulo Giannis
     sub_title: |
-      Contemporary Italian restaurant and bar.
+      Contemporary Italian restaurant.
     location: Lancaster, UK
     team_size: 6-10
     date_range: October 2013 – April 2014
@@ -34,31 +38,25 @@ roles:
     small_image: role/paulo-giannis.jpg
     meta_title: "Paulo Giannis | Ziggy Bracey"
     intro: |
-      Although an unusual career move, I took on this position to develop my understanding of food, inform my writing and pursue my passion for food.
-    body: |
-      Social media management
-      Developing recipes for weekly specials and seasonal menus
-      Preparing and cooking food during service
-
+      Although an unusual career move, I took on this position to develop my understanding of and pursue my passion for food.
+    body:
+      - With no prior experience in a professional kitchen, I moved from prepping food to the starters and desserts section where I devised weekly specials, refined my palate and learnt a wide range of cooking techniques.
   -
     slug: molly-moo
-    name: Molly Moo Dairy Free
+    name: Molly Moo Dairy Free Baby Food
     sub_title: |
-      Specialist range of dairy free mini meals for babies and toddlers.
+      Dairy free for busy bees.
     location: Lancaster, UK
     team_size: "3"
     date_range: June 2013 – August 2013
 
     position: Commis Chef
-    skills: Cheffing, Recipie Creation, Prepping
+    skills: Social Media, Recipie Creation, Blogging
     small_image: role/molly-moo.jpg
-    meta_title: "Paulo Giannis | Ziggy Bracey"
-    intro: |
-      Throughout my time at this specialist baby food company, I worked independently to develop brand awareness, generating promotional material in keeping with the existing brand profile and voice.
-    body: |
-      During this time I:
-        researched the consumer and
-        social media
-        cook book
-        website, blog and newsletter content
-        created the sourdough campaign on the blog and twitter
+    meta_title: "Molly Moo Dairy | Ziggy Bracey"
+    intro: At this specialist baby food startup, I worked with the founder to define the voice and tone of the brand, decide which marketing channels would be most effective and create content accordingly.
+    body:
+      - During this time I profiled customers to define content strategy and voice for a cookbook, newsletters, the website and a blog.
+
+
+

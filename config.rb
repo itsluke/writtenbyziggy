@@ -98,23 +98,23 @@ configure :build do
 
   set :api_host, 'http://recordmyhing.herokuapp.com'
 
-  data.case_studies.each do |id, case_study|
-    if case_study.published == false
-      ignore "/case-studies/#{id.dasherize}.html"
+  data.writing_examples.each do |id, writing|
+    if writing.published == false
+      ignore "/my-writing/#{id.dasherize}.html"
     end
   end
+
   ignore "/role.html"
 
 end
 
-page "/case-studies/*", layout: 'layouts/case-study'
+page "/my-writing/*", layout: 'layouts/case-study'
 page "/blog/*", layout: 'layouts/post'
 page "/contact"
 
 data.cv.roles.each do |role|
-  page "/cv/#{role.slug}.html", proxy: "role.html", locals: { role: role }, directory_index: false
+  page "/cv/#{role.slug}.html", proxy: "role.html", locals: { role: role }
 end
-
 
 set :latest_role, "/cv/#{data.cv.roles.first.slug}"
 

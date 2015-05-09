@@ -1,7 +1,7 @@
 .browser {
 	display: block;
 	overflow: hidden;
-	height: 400px;
+	height: 200px;
 	width: 100%;
 	padding: 40px 3px 0;
 	background: $color-darkBeige;
@@ -16,9 +16,16 @@
 .browser--full {
 	height: auto;
 }
+.browser--email {
+  width: 300px;
+  padding-top: 30px;
+}
 .browser--iphone {
 	width: 300px;
 	padding-top: 30px;
+  .inner {
+    padding: 20px 20px 0px 20px;
+  }
 }
 .browser--iphone-bottom {
 	padding-bottom: 60px;

@@ -9,7 +9,7 @@
     @include rem(line-height, 3.2rem);
   }
   em {
-    @include rem(line-height, 0.8rem);
+    @include rem(line-height, 2rem);
     @extend .subtext-color;
     .hire-us__overlay & {
       color: $color-lightBeige;

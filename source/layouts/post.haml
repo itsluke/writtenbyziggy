@@ -15,10 +15,6 @@
 
                 %em{itemprop: "name"}
                   - posted_by = current_article.metadata[:page]['post_by']
-                  - matched_user = data.team.members.select{|m| "#{m.first_name} #{m.last_name}".downcase == posted_by.downcase}.first
-                  - if matched_user
-                    = link_to posted_by, "/team/#{matched_user.slug}"
-                  - else
                     = posted_by
 
               %div.span-2.meta-details

@@ -1,0 +1,115 @@
+@import "settings/variables";
+@import "settings/imports";
+@import "settings/mixins";
+
+@import "vendor/normalize";
+
+@import "base/typography";
+@import "base/grid";
+@import "base/icon-font";
+
+@import "modules/nav";
+@import "modules/media";
+@import "modules/buttons";
+@import "modules/alerts";
+@import "modules/browser";
+@import "modules/logo";
+@import "modules/containers";
+@import "modules/meta-details";
+@import "modules/animations";
+
+@import "components/header";
+@import "components/hero";
+@import "components/hire-us";
+@import "components/owl-carousel";
+@import "components/process";
+@import "components/case-studies";
+@import "components/landing";
+@import "components/roles";
+
+@import "base/helpers";
+
+
+.team-img {
+  display: block;
+  background-image: url(../img/team/team.png);
+  background-size: cover;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  line-height: 0;
+  background-position: top center;
+  @include hidpi(1.5) {
+    background-image: url(../img/team/team_x2.png);
+  }
+}
+.team-img--James {
+  background-position: 0 -121px;
+}
+.team-img--Kevin {
+  background-position: 0 -241px;
+}
+.team-img--Glen {
+  background-position: 0 -362px;
+}
+.team-img--Scott {
+  background-position: 0 -482px;
+}
+
+.client {
+  display: block;
+  background-image: url(../img/logos/clients.png);
+  background-size: cover;
+  width: 140px;
+  height: 98px;
+  line-height: 0;
+  background-position: top center;
+  @include hidpi(1.5) {
+    background-image: url(../img/logos/clients_x2.png);
+  }
+}
+.client--salesforce {
+  background-position: 0 -98px;
+}
+.client--unroll {
+  background-position: 0 -196px;
+}
+.client--crew {
+  background-position: 0 -294px;
+}
+
+
+.case-study__color {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+}
+
+.blog p > img {
+  width: 100%;
+  float: left;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hireus-cta {
+  .btn--primary {
+    opacity: .9;
+    transform: scale(.8);
+  }
+  &.animate {
+    .btn--primary {
+      @include animation(subtle-zoom $timing-longer forwards cubic-bezier(0.6, -0.28, 0.735, 0.045));
+    }
+  }
+}
+
+
+table {
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}

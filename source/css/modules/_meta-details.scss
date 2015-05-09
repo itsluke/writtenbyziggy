@@ -1,0 +1,60 @@
+.meta-details {
+  @include rem(font-size, 1.5rem);
+  strong, em {
+    display: block;
+  }
+  strong {
+    text-transform: uppercase;
+    font-weight: 500;
+    @include rem(line-height, 3.2rem);
+  }
+  em {
+    @include rem(line-height, 0.8rem);
+    @extend .subtext-color;
+    .hire-us__overlay & {
+      color: $color-lightBeige;
+    }
+    a {
+      @extend .subtext-color;
+    }
+  }
+  .animate & {
+    @media screen and (min-device-width : 600px) {
+      @include animation(zoom $timing-long forwards ease);
+    }
+  }
+  .team--David & {
+    @media screen and (min-device-width : 600px) {
+      transform: scale(.1);
+      opacity: 0;
+    }
+  }
+  .team--James & {
+    @media screen and (min-device-width : 600px) {
+      transform: scale(.1);
+      opacity: 0;
+      @include animation-delay(100ms);
+    }
+  }
+  .team--Kevin & {
+    @media screen and (min-device-width : 600px) {
+      transform: scale(.1);
+      opacity: 0;
+      @include animation-delay(200ms);
+    }
+  }
+  .team--Glen & {
+    @media screen and (min-device-width : 600px) {
+      transform: scale(.1);
+      opacity: 0;
+      @include animation-delay(300ms);
+    }
+  }
+  .team--Scott & {
+    @media screen and (min-device-width : 600px) {
+      transform: scale(.1);
+      opacity: 0;
+      @include animation-delay(400ms);
+    }
+  }
+}

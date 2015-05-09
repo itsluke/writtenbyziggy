@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: $zindex-header;
+  top: 0;
+  .nav, .btn, .logo {
+    position: relative;
+    z-index: $zindex-header-inside;
+  }
+}
+.header__nav, .footer__nav {
+  a {
+    margin-left: 20px;
+  }
+  li:first-child a {
+    margin-left: 0;
+  }
+}
+
+.header__nav__active a {
+  color: $color-secondary;
+  &:after {
+    top: -33px;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: $color-primary;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+}
+.header--fixed:before {
+  position: absolute;
+  display: block;
+  height: 70px;
+  content: '.';
+  color: transparent;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: $color-lightBeige;
+  z-index: $zindex-header;
+}
+.header--fixed:after {
+  z-index: $zindex-header;
+  display: block;
+  content: '.';
+  color: transparent;
+  height: 100px;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    $color-lightBeige 0%,
+    rgba($color-lightBeige, 0) 100%);
+}

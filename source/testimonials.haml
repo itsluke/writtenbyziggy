@@ -1,0 +1,24 @@
+---
+title: What our clients think of us
+---
+
+- content_for :footer do
+  = javascript_include_tag 'testimonials'
+
+%section.hero.hero--fixed-height
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %h1 So you heard some sexy things about us ey?!
+
+      %div.section.separator-top.padding-bottom-none
+
+%section.section.container.text-center.padding-top-none
+  %h2 They happen to be true!
+
+%div#testimonials.container.container--medium.text-center
+  - data.case_studies.each do |id, testimonial|
+    - if testimonial.quote.present?
+      - unless environment == :build && !testimonial.published
+        %blockquote.quote
+          %p= testimonial.quote
+          %cite — #{testimonial.quote_by}, #{testimonial.client}

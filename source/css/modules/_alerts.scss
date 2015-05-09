@@ -1,0 +1,36 @@
+.alert {
+  clear: both;
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: $padding-btn;
+	text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  @include rem(font-size, 1.3rem);
+  font-weight: 500;
+  border: 2px solid $color-text;
+  color: $color-text;
+  @include rem(border-radius, 10rem);
+  border: 2px solid #FBAF5D;
+  background: #FFE9D1;
+  line-height: 1.5rem;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.alert--success {
+    background: #c7dbc5;
+    border-color: #77bd81; 
+}
+
+#enquiry-success {
+  margin: -20px 0 0;
+  position: relative;
+  @media only screen
+    and (min-height : 600px)
+  {
+    margin: 0;
+  }
+}

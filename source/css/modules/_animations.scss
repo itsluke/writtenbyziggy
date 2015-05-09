@@ -1,0 +1,74 @@
+@include keyframes('fade-in') {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes('zoom') {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@include keyframes('subtle-zoom') {
+  0% {
+    opacity: .9;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@include keyframes('bounce') {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-11px);
+    -moz-transform: translateY(-11px);
+    transform: translateY(-11px);
+  }
+}
+
+@include keyframes('glide-up') {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@include keyframes('glide-up-subtle') {
+  0% {
+    transform: translateY(20px);
+    opacity: .7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bounce {
+  @include animation(bounce $timing-short forwards ease);
+}
+
+.strip-animation {
+  @include animation(none);
+}

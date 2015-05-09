@@ -1,0 +1,5 @@
+.media {}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: $padding-section;overflow:visible;}
+.media .img img{display:block;}
+.media .section {overflow: visible;}

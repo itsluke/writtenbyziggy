@@ -1,0 +1,78 @@
+- project_id = current_page.url.gsub('/', '').gsub('case-studies', '').underscore
+- project = data.case_studies["#{project_id}"]
+
+%section.container
+  
+  %div.section.container.container--small
+    = image_tag 'case-studies/zipery/logo.png', width: 330, class: 'margin-auto'
+
+  %div.section.container.container--medium
+    %h2.text-center Help a traveller fund his travel and get a faster, better postage service
+    %p.p--intro.text-center
+      Zipery had a great idea for an iOS app but needed some help with both the user experience and design. Simple as Milk were there to help, creating a brand new user experience and design to bring the product to life.
+    %div.container.container--vsmall
+      %p This product is an international postage application for the iPhone, used mainly by travellers. Inside the app you can specify whether you’re a ‘traveller’ looking to transit packages or a ‘sender’ who is looking for help with their package deliveries. By using this app instead of a post office, you get to help a traveller fund his travel and at the same time get a faster, better postage service.
+      %p We worked closely with the guys at Zipery, crafting a user experience that used initiative and was simple to use. We helped them beyond the usual wireframes and user experience suggestions; we refined features, cut out the fat and fleshed out areas in need, to create a well-rounded product.
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span A quote from the client themselves
+    %div.container.container--medium
+      %blockquote.section.quote
+        %p= project.quote
+        %cite 
+          — 
+          = "#{project.quote_by}, #{project.client}"
+
+  %hr
+
+  %div.section.container.container--medium
+    %h2.text-center Branding
+    %p.p--intro.text-center
+      As a company we’re passionate about travel and so, as a travel application, we wanted to represent the company’s brand as accurately as possible.
+    %div.container.container--vsmall
+      %p We did a lot of research into the travel industry and decided that the best course of action was to look into airlines. We studied their branding, their colours and collected anything we could use from the airline industry as inspiration. We wanted to make sure users knew what the product was about, before they even opened the app.
+      %p We noted that the two main colours of the airline industry are red and blue; colours that take up a huge percentage of the airline brands out there. Once we had our colours we experimented with different ways to give the brand a positive feel, in a way that said ‘reliable, modern and useful’ and as if it was made exclusively for the beauty of iOS 7 and 8.
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Colors
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %span.case-study__color{style: "background-color: #3E449F"}
+      %span.case-study__color{style: "background-color: #C72E49"}
+      %span.case-study__color{style: "background-color: #FFFFFF"}
+      %span.case-study__color{style: "background-color: #EDF0F6"}
+      %span.case-study__color{style: "background-color: #3f444d"}
+      
+  %section.section
+    %h3.h5.uppercase.h--seporator.text-center
+      %span Typography choices
+    %div.section.padding-top-none
+      = image_tag 'case-studies/zipery/typography.png', width: 400
+      %h6 Chosen for it's long x-height and movment-like angles
+
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Hand crafted icons
+
+    %section.section.padding-top-none
+      %div.section.flexbox.flexbox--justify
+        %div
+          = image_tag 'case-studies/zipery/icons.png', width: 1040
+
+  %hr
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.container.container--medium
+      %h2.text-center The final result 
+    %div.container.container--browsers
+      %div.section.padding-bottom-none.relative
+        %div.browser.browser--full.browser--iphone.browser--iphone-bottom.pull-left
+          = image_tag 'case-studies/zipery/main.png', width: 320
+        %div.browser.browser--full.browser--iphone.pull-left.margin-left-20
+          = image_tag 'case-studies/zipery/listing.jpg', width: 320
+        %div.browser.browser--full.browser--iphone.browser--iphone-bottom.pull-left.margin-left-20
+          = image_tag 'case-studies/zipery/profile.jpg', width: 320
+  %div.container.container--large.separator-bottom.relative

@@ -1,0 +1,119 @@
+.btn {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: $padding-btn;
+	text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  @include user-select(none);
+  @include rem(font-size, 1.3rem);
+  font-weight: 500;
+  border: 2px solid $color-text;
+  color: $color-text;
+	background-color: transparent;
+  @include rem(border-radius, 10rem);
+	cursor: pointer;
+  @include rem(letter-spacing, 0.05rem);
+  text-transform: uppercase;
+  @include transition(color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s);
+  line-height: 1.5rem;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    color: darken($color-text, 15%);
+    border-color: darken($color-text, 15%);
+  }
+}
+
+
+// Button styles
+
+.btn--primary {
+  border: 2px solid $color-primary;
+  color: darken($color-primary,5%);
+  background: rgba(lighten($color-lightBeige,20%),0.8);
+  @include rem(min-width, 12rem);
+  &:hover {
+    border-color: darken($color-primary, 15%);
+    color: darken($color-primary, 15%);
+  }
+}
+
+.btn--previous, .btn--secondary {
+  color: $color-tertiary;
+  border-color: $color-tertiary;
+  &:hover {
+    border-color: $color-text;
+    color: $color-text;
+  }
+}
+
+.nav .btn--primary {
+  margin-left: 20px;
+}
+
+.btn--empty {
+  border: 0;
+  color: $color-tertiary;
+  &:hover {
+    background-color: transparent;
+    color: $color-text;
+  }
+}
+.btn--full {
+  width: 100%;
+}
+
+
+.btn--icon {
+  &:before, &:after {
+    @include rem(font-size, 1.6rem);
+    @include rem(margin-right, 1rem);
+    vertical-align: middle;
+    line-height: 0;
+  }
+  &:after {
+    margin-right: 0;
+    @include rem(margin-left, 1rem);
+    text-align: right;
+  }
+}
+
+.btn--icon-large {
+  &:before, &:after {
+    @include rem(font-size, 2.4rem);
+  }
+}
+
+// Button sizes
+
+.btn--large {
+  padding: $padding-btnLarge;
+  @include rem(font-size, 1.8rem);
+  &.btn--primary {
+    @include rem(min-width, 20rem);
+  }
+}
+
+.btn-group {
+  display: inline-block;
+  a {
+    border-radius: 0;
+    display: block;
+    float: left;
+    @include rem(min-width, 12rem);
+  }
+  a:first-of-type {
+    @include rem(border-top-left-radius, 10rem);
+    @include rem(border-bottom-left-radius, 10rem);
+    border-right: 0;
+  }
+  a:last-of-type {
+    border-left: 0;
+    @include rem(border-top-right-radius, 10rem);
+    @include rem(border-bottom-right-radius, 10rem);
+  }
+}

@@ -1,0 +1,60 @@
+.browser {
+	display: block;
+	overflow: hidden;
+	height: 400px;
+	width: 100%;
+	padding: 40px 3px 0;
+	background: $color-darkBeige;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	line-height: 0;
+	position: relative;
+	img {
+		width: 100%;
+	}
+}
+.browser--full {
+	height: auto;
+}
+.browser--iphone {
+	width: 300px;
+	padding-top: 30px;
+}
+.browser--iphone-bottom {
+	padding-bottom: 60px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.browser--left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.browser--iphone-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: -120px;
+	margin-top: 150px;
+	@media only screen and (max-width : 1100px) {
+		margin-right: 0;
+		right: 15px;
+	}
+}
+.browser--width-900 {
+	max-width: 900px;
+}
+.browser--zindex-top {
+	z-index: 50;
+}
+.browser-container {
+	padding: 0 20px;
+	line-height: 0;
+	width: 940px;
+}
+
+.detail-zoom {
+	border-radius: 100%;
+	overflow: hidden;
+	border: 3px solid $color-darkBeige;
+}

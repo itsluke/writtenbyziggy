@@ -1,0 +1,64 @@
+- content_for(:title, role.meta_title)
+- content_for(:sub_title, role.sub_title)
+- content_for(:og_image, image_url("og/#{role.slug}.png"))
+- current_index = data.cv.roles.index(role)
+
+%section.hero.hero--fixed-height
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %div.media.section
+        %div.img
+          %span{class: "role-img role-img--#{role.slug}"}
+        %div.bd
+          %h1.margin-none
+            = role.name
+          %h2.margin-none.font-weight-500.subtext-color
+            = role.sub_title
+
+      %div.section.separator-top
+        %div.container
+          %div.span-5.meta-details
+            %strong Role
+            %em= role.position
+          - if !role.location.empty?
+            %div.span-2.meta-details
+              %strong Location
+              %em= role.location
+          - if !role.team_size.empty?
+            %div.span-2.meta-details
+              %strong Company Size
+              %em= role.team_size
+          - if !role.date_range.empty?
+            %div.span-3.meta-details
+              %strong Dates
+              %em= role.date_range
+
+
+%article.section.container
+  %div.container--medium.container--left
+    %p.p--intro= role.intro
+    %div.container
+      %div.span-8.meta-details.margin-bottom-30
+        %strong Skills
+        %em= role.skills
+    %div.container.container--vsmall.container--left
+      =simple_format role.body
+
+
+- if current_index+1 < data.cv.roles.length
+  - next_role = data.cv.roles[current_index+1]
+  %section.section.container
+    %div.span-2
+      = link_to 'Next', "/cv/#{next_role.slug}", class: 'btn btn--primary btn--full btn--icon icon--right'
+    %div.span-10.details.meta-details
+      %strong= next_role.name
+      %em= next_role.sub_title
+
+- if current_index > 0
+  - prev_role = data.cv.roles[current_index-1]
+  %section.section.container.padding-top-none
+    %div.span-2
+      = link_to 'Previous', "/cv/#{prev_role.slug}", class: 'btn btn--secondary btn--full btn--previous'
+    %div.span-10.details.meta-details
+      %strong= prev_role.name
+      %em= prev_role.sub_title

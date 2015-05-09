@@ -1,0 +1,87 @@
+- project_id = current_page.url.gsub('/', '').gsub('case-studies', '').underscore
+- project = data.case_studies["#{project_id}"]
+
+%section.container
+  
+  %div.section.container.container--small
+    = image_tag 'case-studies/unroll/logo.svg', width: 330, class: 'margin-auto'
+
+  %div.section.container.container--medium
+    %h2.text-center More users. Higher conversion rates. A better user experience.
+    %p.p--intro.text-center
+      Unroll.Me is a great service for saving email clutter.
+    %div.container.container--vsmall
+      %p They came to us to increase their conversions, design using their data and improve the user experience of their application. We worked with them for 9 months, redesigning their site, application and assisting with their rebrand all whilst using their data to make sure the changes we made were effective. We test everything to the fullest, allowing them to focus on their company and product, while we handle everything technical.
+      %div.section.text-center
+        %a.btn.btn--primary{href: "http://unroll.me/"} Visit Unroll.Me
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span A quote from the client themselves
+    %div.container.container--medium
+      %blockquote.section.quote
+        %p= project.quote
+        %cite 
+          — 
+          = "#{project.quote_by}, #{project.client}"
+
+  %hr
+
+  %div.section.container.container--medium
+    %h2.text-center Bringing a personality to Unroll.Me
+    %p.p--intro.text-center
+      The one thing Unroll.Me lacked was a personality. It was a beautiful product that worked really well but we needed to target and attract an audience.
+    %div.container.container--vsmall
+      %p When we started working with Unroll, Vic Bell had just been hired to help with the rebrand. We worked with both Vic and the Unroll team to direct her on what illustrations we needed for the site, inviting her to work her magic. This direction was revised a number of times alongside Unroll.Me's marketing team, as we tried out targeting different markets. We re-designed the product when it was required, to better fit these targets. Combining this with some split testing worked absolute wonders.
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Colors
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %span.case-study__color{style: "background-color: transparent"}
+      %span.case-study__color{style: "background-color: #25b89b"}
+      %span.case-study__color{style: "background-color: #f5f6f8"}
+      %span.case-study__color{style: "background-color: #2b3034"}
+      %span.case-study__color{style: "background-color: transparent"}
+      
+  %section.section
+    %h3.h5.uppercase.h--seporator.text-center
+      %span Typography choices
+    %div.section.padding-top-none
+      = image_tag 'case-studies/unroll/typography.png', width: 700
+      %h6 Chosen for it’s clean, modern style and workhorse nature
+
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Illustrations
+
+    %section.section.padding-top-none
+      %div.section.flexbox.flexbox--justify
+        %div.margin-auto
+          = image_tag 'case-studies/unroll/illustration.svg', width: 700
+
+  %hr
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container.container--large.separator-bottom
+    %div.section.container.container--medium
+      %h2.text-center The final result
+
+    %div.section.padding-bottom-none.relative.clearfix.relative{style: "padding-top: 400px"}
+      %div.browser.browser--full.browser--width-900.pull-right.browser--zindex-top
+        = image_tag 'case-studies/unroll/main.jpg', width: 900
+      %div.browser-container.separator-bottom.browser--left
+        %div.browser.browser--full
+          = image_tag 'case-studies/unroll/ui.jpg', width: 900
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.container.container--medium
+      %h2.text-center An unused concept
+
+    %div.container.container--browsers
+      %div.section.padding-bottom-none.relative
+        %div.browser.browser--full
+          = image_tag 'case-studies/unroll/lifestyle.jpg', width: 900
+  %div.container.container--large.separator-bottom.relative

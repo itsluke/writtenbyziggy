@@ -1,0 +1,59 @@
+// SCSS variables
+// ---------------------------------------
+
+// Add the typefaces here. A Regular, Italic and Bold weight of a serif & Regular and Bold weight of a sans-serif are recommended to use. Keep the fallbacks if you like.
+$serif: 'Panton-Regular', 'Panton-Regular', Georgia, serif;
+$san-serif: 'Panton-Bold', 'Panton-Bold', Helvetica, sans-serif;
+$san-serif-alt: 'Panton-ExtraBold', 'Panton-ExtraBold', Helvetica, sans-serif;
+
+// $color-primary:       #EB3552; // Red
+// $color-primary:          #F3C859; // Gold
+$color-primary:          darken(rgb(240, 214, 108),14%); // Gold
+// $color-primary: 			   #1384c3; // Blue
+$color-secondary: 			 #272727; // Dark Grey
+$color-tertiary: 			   #828383; // Light Grey
+
+
+// $color-lightBeige:    lighten(#E9E8E3,10%);
+$color-lightBeige: 		lighten(#E9E8E3,6%);
+$color-darkBeige:			darken($color-lightBeige, 8%);
+
+$color-text: 				$color-secondary;
+$color-link: 				$color-primary;
+$color-background:	$color-lightBeige;
+
+// Fonts, measure, leading and typefaces
+// -----------------------------------------------------------------------------
+
+// Fonts size and line height defaults for our calculations
+$base-font-size							: 2rem; 				// Sets the browser default size. Shouldn't need to change this.
+$base-line-height						: 4rem;					// Baseline grid. Set to a sensible, small size.
+
+$padding-btn: 15px 20px;
+$padding-btnLarge: 25px 25px;
+$padding-section: 40px;
+
+
+// z-index ordering
+// -----------------------------------------------------------------------------
+$zindex-modal: 1200;
+$zindex-main-logo: 1100;
+$zindex-header: 1000;
+$zindex-header-inside: 1050;
+
+/** timing variables for animations **/
+$timing-base : 190;
+$timing-normal : $timing-base * 1ms;
+$timing-short : $timing-base * .6154 * 1ms;
+$timing-long : $timing-base * 1.6154 * 1ms;
+$timing-longer : $timing-base * 4.2308 * 1ms;
+$timing-longest : $timing-base * 6.8462 * 1ms;
+$timing-longest : $timing-base * 5.8462 * 1ms;
+
+// Turn off prefixing, handled by autoprefixer
+// -----------------------------------------------------------------------------
+$prefix-for-webkit:    false;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+$prefix-for-spec:      true;

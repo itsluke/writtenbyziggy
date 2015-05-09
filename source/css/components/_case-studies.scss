@@ -1,0 +1,23 @@
+.browser-wrapper {
+  overflow: hidden;
+}
+
+
+.case-studies {
+  .container {
+    .browser--small {
+      @media screen and (min-device-width : 600px) {
+        transform: translateY(20px);
+        opacity: .7;
+      }
+    }
+    &.animate {
+      .browser--small {
+        @media screen and (min-device-width : 600px) {
+          @include animation(glide-up-subtle $timing-longer forwards ease);
+          @include animation-delay($timing-longer);
+        }
+      }
+    }
+  }
+}

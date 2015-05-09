@@ -1,0 +1,13 @@
+.logo:before {
+	color: $color-primary;
+	display: block;
+	position: absolute;
+	font-size: 50px;
+	left: 0;
+}
+.logo--main:before {
+	font-size: 228px;
+	z-index: $zindex-main-logo;
+	margin-top: $padding-section;
+	left: auto;
+}

@@ -1,0 +1,105 @@
+- project_id = current_page.url.gsub('/', '').gsub('case-studies', '').underscore
+- project = data.case_studies["#{project_id}"]
+
+%section.container
+  
+  %div.section.container.container--small
+    = image_tag 'case-studies/justpark/logo.png', width: 330, class: 'margin-auto'
+
+  %div.section.container.container--medium
+    %h2.text-center A project with two sides
+    %p.p--intro.text-center
+      Park at my house got in touch with us to design their web and iOS applications, alongside their site, from the ground up.
+    %div.container.container--vsmall
+      %p Our mission was to better represent their company’s personality, portray their brand and speak to their target audience. Half way through this project we were met with the extra challenge of re-branding again in order to target a different audience, working with a new name of ‘JustPark’. We seriously love a challenge and we had a lot of fun with it.
+
+  %section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+    %div.container
+      %div.container.container--browsers
+        %div.section.padding-bottom-none.relative
+          %div.browser.browser--full
+            = image_tag 'case-studies/justpark/main.jpg', width: 900
+    %div.container.container--large.separator-bottom.relative
+
+  %div.section.container.container--medium
+    %h2.text-center Branding
+    %p.p--intro.text-center
+      Bringing the brand to life through color and typography. With a dash of illustration.
+    %div.container.container--vsmall
+      %p Before Park at my House rebranded to JustPark, bringing the brand to life was simple. We wanted to be playful, utilise the colours of the existing logo and inject some much needed personality into the UI. 
+      %p However, after the re-brand to JustPark, this was a very different story. They wanted all of the design work to be crisp and clean, a grown-up brand with a serious agenda. So this resulted in the following:
+      %p Typography was kept simple and lightweight. We wanted this application to run as fast as possible and we felt with the colour pallet and illustrations we only needed a subtle typeface. One that would fit comfortably within the brand personality but not over complicate the design.
+      %p For Park at my House we wanted to bring the concept to life with illustrations. Animated illustrations. We produced the following and we even made the car drive along and "park".
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span ParkatmyHouse Colors
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %span.case-study__color{style: "background-color: #529BD9"}
+      %span.case-study__color{style: "background-color: #46C282"}
+      %span.case-study__color{style: "background-color: #FCD578"}
+      %span.case-study__color{style: "background-color: #D6686A"}
+      %span.case-study__color{style: "background-color: #F5F5F5"}
+    %h3.h5.uppercase.h--seporator
+      %span JustPark Colors
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %span.case-study__color{style: "background-color: #2BDE73"}
+      %span.case-study__color{style: "background-color: #FF4D5B"}
+      %span.case-study__color{style: "background-color: #FFD64D"}
+      %span.case-study__color{style: "background-color: #21A5FC"}
+      %span.case-study__color{style: "background-color: #1F2530"}
+      
+  %section.section
+    %h3.h5.uppercase.h--seporator.text-center
+      %span Typography choices
+    %div.section.padding-top-none
+      = image_tag 'case-studies/justpark/typography.png', width: 700
+      %h6 Chosen as it's a beautiful workhorse typeface
+
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span ParkatmyHouse Illustration
+
+    %section.section.padding-top-none
+      %div.section.flexbox.flexbox--justify
+        %div
+          = image_tag 'case-studies/justpark/illustration.jpg', width: 1040
+
+  %hr
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.section.container.container--medium
+      %h2.text-center Strong branding is in the detail
+      %p.p--intro.text-center We breathe a brand’s personality when we design, paying serious attention to every last detail.
+      = image_tag 'case-studies/example/login.png', class: 'section margin-auto'
+
+    %div.section.container.separator-bottom.padding-top-none
+      %div.section.flexbox.flexbox--justify.padding-top-none
+        %div
+          = image_tag 'case-studies/example/detail-map.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-dropdown.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-share.png', width: 290, height: 290, class: 'detail-zoom'
+      %div.section.flexbox.flexbox--justify
+        %div
+          = image_tag 'case-studies/example/detail-checkin.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-form.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-search.png', width: 290, height: 290, class: 'detail-zoom'
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.container.container--medium
+      %h2.text-center The final result 
+
+    %div.container.container--browsers
+      %div.section.padding-bottom-none.relative
+        %div.browser.browser--full.browser--width-900
+          = image_tag 'case-studies/justpark/listing.jpg', width: 900
+        %div.browser.browser--full.browser--iphone.browser--iphone-right.browser--iphone-bottom
+          = image_tag 'case-studies/justpark/iphone.jpg', width: 320
+  %div.container.container--large.separator-bottom.relative

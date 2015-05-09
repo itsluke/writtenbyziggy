@@ -1,0 +1,108 @@
+.hire-us__overlay {
+  position: fixed;
+  z-index: $zindex-modal;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  padding: 5% 0;
+  width: 100%;
+  height: 100%;
+  color: $color-lightBeige;
+  background-color: rgba($color-primary, 0.97);
+  h2 {
+    @include animation(fade-in $timing-long forwards cubic-bezier(0.6, -0.28, 0.735, 0.045));
+  }
+  .separator-top {
+    border-top: 2px solid $color-lightBeige;
+  }
+  .btn--secondary {
+    border-color: $color-lightBeige;
+    color: $color-lightBeige;
+    background: transparent;
+    &:hover {
+      border-color: darken($color-lightBeige, 15%);
+      color: darken($color-lightBeige, 15%);
+    }
+  }
+  .btn--primary {
+    background: $color-lightBeige;
+    color: $color-text;
+    border-color: $color-lightBeige;
+    &:hover {
+      background: darken($color-lightBeige, 15%);
+      color: $color-text;
+      border-color: darken($color-lightBeige, 15%);
+    }
+  }
+  .btn--disabled, .btn--disabled:hover {
+    background: $color-lightBeige;
+    color: darken($color-lightBeige, 20%);
+    border-color: $color-lightBeige;
+  }
+  .btn {
+    transform: scale(.1);
+    opacity: 0;
+    @include animation(zoom $timing-longer forwards cubic-bezier(0.6, -0.28, 0.735, 0.045));
+  }
+  .btn-group {
+    transform: scale(.1);
+    opacity: 0;
+    @include animation(zoom $timing-longer forwards cubic-bezier(0.6, -0.28, 0.735, 0.045));
+    .btn {
+      transform: scale(1);
+      opacity: 1;
+      animation: none;
+    }
+  }
+  .location-info {
+    transform: translateY(40px);
+    opacity: 0;
+    @include animation(glide-up $timing-long forwards ease);
+    @include animation-delay($timing-long);
+  }
+}
+
+.hire-us__close {
+  @include rem(font-size, 4.2rem);
+  margin: $padding-section 0 $padding-section*2;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    color: $color-lightBeige;;
+    font-size: 8rem;
+    height: 65px;
+  }
+  a:hover {
+    color: darken($color-lightBeige, 15%);
+  }
+}
+
+.hire-us__input, .hire-us__textarea {
+  border: 0;
+  display: block;
+  background: transparent;
+  text-align: center;
+  color: $color-lightBeige;
+  width: 100%;
+  max-width: 100%;
+  font-family: $san-serif;
+  font-style: normal;
+  font-weight: 300;
+  resize: none;
+  @include rem(font-size, 2.2rem);
+  @include rem(line-height, 3.2rem);
+
+  @include placeholder {
+    color: $color-lightBeige;
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.input__errors {
+  margin-top: 20px;
+}

@@ -1,0 +1,84 @@
+---
+title: Ziggy Bracey - Strategy, Copy & Food
+headline: I'm Ziggy and I write and I eat, and I eat and I write.
+sub_heading: Profesional Tastemaker
+skills:
+  - main: Copywriting
+    sub: Medium & Long Form
+  - main: Content Strategy
+    sub: Brand Positioning & Tone
+  - main: Product Development
+    sub: User Research & Analysis
+
+about_me:
+  - I’m a content strategist and copywriter with skills in product management, looking for an join an exciting new start up where I can combining my writing skills with my love of food.
+
+  - I’ve worked with multiple brands to help them define the tone, voice and content of their copy, all across a range of platforms. Researching and profiling is key to all of my work, and allows me to better understand the why as well as the how. This allows me to use my writing skills to turn high-level concepts into compelling medium and long form copy.
+
+divider: A Few Of My Favorite Things
+
+favorites:
+  - title: All The Food
+    content: From garlic custard snails to Szechwan mixed tendon stew, it's all delicious (apart from rice, yuck!).
+  - title: Virginia Woolf
+    content: I mean lets be honest what's not to love? I mean really! Lets not be silly.
+  - title: Always Learning
+    content: I enjoy nothing more than an excuse to shut myself away and learn something completely new.
+
+quote:
+  from: Rich, FOODit
+  content: |
+    Ziggy is an invaluble member of the team here, and Lorem ipsum dolor sit amet, consectetur adipiscing elit. Constructio interrete. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Qui-vere falsone, quaerere mittimus-dicitur...
+
+---
+
+/ %section.hero.hero_image
+%section.hero
+  / %div.hero_image_overlay
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %h1= current_page.data.headline
+      - if !current_page.data.sub_heading.blank?
+        %h2= current_page.data.sub_heading
+
+      %div.section.separator-top
+        %div.container
+          %div.span-5
+            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#aboutme"} About Me
+
+          %div.span-7
+            %div.span-4--of-12.meta-details
+              %strong= current_page.data.skills[0].main
+              %em= current_page.data.skills[0].sub
+            %div.span-4--of-12.meta-details
+              %strong= current_page.data.skills[1].main
+              %em= current_page.data.skills[1].sub
+            %div.span-4--of-12.meta-details
+              %strong= current_page.data.skills[2].main
+              %em= current_page.data.skills[2].sub
+
+%section.section.container.container--medium.text-center#aboutme
+  %p.p--intro= current_page.data.about_me[0]
+
+  - current_page.data.about_me[1..-1].each do |paragraph|
+    %p.p--intro
+      %em= paragraph
+
+
+%div.section.container.text-center.clearfix
+  %h3.h5.uppercase.h--seporator
+    %span= current_page.data.divider
+
+
+  %div.container.container--medium
+    %ul.nav.flexbox.flexbox--justify.section
+      - current_page.data.favorites.each do |favorite|
+        %li{:class => "span-#{(12 / current_page.data.favorites.count)}"}
+          %p= favorite.title
+          %em= favorite.content
+
+%section.section.container.container--medium.text-center
+  %blockquote.section.quote
+    %p= current_page.data.quote.content
+    %cite — #{current_page.data.quote.from}
+  %a.btn.btn--large.btn--primary{href: '#/contact'} Contact Me

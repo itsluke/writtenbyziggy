@@ -1,0 +1,17 @@
+%header.header
+  %div.section.container.clearfix
+    / - is_hidden = current_page.url == "/" ? "display-none" : "
+    / = link_to ", "/index.html", class: "logo logo--small #{is_hidden}", rel: "fade"
+
+    %nav.nav.nav--inline.header__nav.pull-right
+      %li{class: ("header__nav__active" if current_page.url == "/")}
+        = link_to "Hello", "/", class: "btn btn--empty", rel: "fade"
+      %li{class: ("header__nav__active" if current_page.url == "/writing/")}
+        = link_to "My Writing", "/case-studies.html", class: "btn btn--empty", rel: "fade"
+      %li{class: ("header__nav__active" if current_page.url == "/cv/")}
+        = link_to "Curriculum Vitae", "/cv.html", class: "btn btn--empty", rel: "fade"
+      %li
+        %a.btn.btn--primary{href: "#/contact"} Contact Me
+
+- if current_page.url == "/"
+  / .container.logo.logo--main

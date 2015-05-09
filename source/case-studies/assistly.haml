@@ -1,0 +1,83 @@
+- project_id = current_page.url.gsub('/', '').gsub('case-studies', '').underscore
+- project = data.case_studies["#{project_id}"]
+
+%section.container
+  
+  %div.section.container.container--small
+    = image_tag 'case-studies/desk/logo.svg', width: 250, class: 'margin-auto'
+
+  %div.section.container.container--medium
+    %h2.text-center Helping create customer wow
+    %p.p--intro.text-center
+      We worked with Assistly for one and a half years. 
+    %div.container.container--vsmall
+      %p We have seen them grow from a company known as 'Assistly' to one that was soon acquired by another huge company - Salesforce. We became a part of their team, helping Assistly to grow and rebrand Assistly into what is now known as today, Desk.com.
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span A quote from the client themselves
+    %div.container.container--medium
+      %blockquote.section.quote
+        %p= project.quote
+        %cite 
+          — 
+          = "#{project.quote_by}, #{project.client}"
+
+  %hr
+  
+  %div.section.container.container--medium
+    %h2.text-center An unknown pricing structure
+    %p.p--intro.text-center
+      One of the most challenging aspects of working with the Assistly team with was working on the pricing page.
+    %div.container.container--vsmall
+      %p To say it was a complex task would be an understatement, this kind of structure had never been seen in the wild before and we were the lucky ones armed with the task of making it clear, simple to understand and effective.
+
+  %section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+    %section.section.text-center
+      %h3.h5.uppercase.h--seporator
+        %span An early pricing page concept
+    %div.container
+      %div.container.container--browsers
+        %div.section.padding-bottom-none.relative
+          %div.browser.browser--full
+            = image_tag 'case-studies/desk/pricing2.jpg', width: 900
+    %div.container.container--large.separator-bottom.relative
+
+  %div.section.container.container--medium
+    %h2.text-center More than just a site
+    %p.p--intro.text-center
+      Although assisting with the site redesign was a major part of our role, we also assisted the team with every other part of their re-design too.
+    %div.container.container--vsmall
+      %p We produced their business cards and illustrations, their marketing materials and JavaScript tracking solutions, and their front-end development. We truly became a part of their team. 
+      %p It was a pleasure to work so closely with a client, to help better both their brand and product. A great project all round.
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Some of the tees we designed
+
+    %section.section.padding-top-none
+      %div.section.flexbox.flexbox--justify
+        %div
+          = image_tag 'case-studies/desk/tee1.png', width: 170
+        %div
+          = image_tag 'case-studies/desk/tee1-2.png', width: 170
+        %div
+          = image_tag 'case-studies/desk/tee2.png', width: 170
+        %div
+          = image_tag 'case-studies/desk/tee3.png', width: 170
+        %div
+          = image_tag 'case-studies/desk/tee4.png', width: 170
+
+  %hr
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container.container--large.separator-bottom
+    %div.section.container.container--medium
+      %h2.text-center The final result
+
+    %div.section.padding-bottom-none.relative.clearfix.relative{style: "padding-top: 400px"}
+      %div.browser.browser--full.browser--width-900.pull-right.browser--zindex-top
+        = image_tag 'case-studies/desk/main.jpg', width: 900
+      %div.browser-container.separator-bottom.browser--left
+        %div.browser.browser--full
+          = image_tag 'case-studies/desk/pricing.jpg', width: 900

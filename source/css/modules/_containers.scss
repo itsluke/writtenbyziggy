@@ -1,0 +1,42 @@
+.container {
+  @include outer-container;
+  @include rem(max-width, 107rem); 
+  @include rem(min-width, 102.5rem); 
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.container--medium {
+  @include rem(width, 80rem);
+  @include rem(max-width, 80rem);
+  @include rem(min-width, 80rem);
+}
+.container--small {
+  @include rem(width, 60rem);
+  @include rem(max-width, 60rem);
+  @include rem(min-width, 60rem);
+}
+.container--vsmall {
+  @include rem(width, 48rem);
+  @include rem(max-width, 48rem);
+  @include rem(min-width, 48rem);
+}
+.container--left {
+  margin: 0;
+}
+
+.container--large {
+  width: 1200px;
+  max-width: 1200px;
+  min-width: 1200px;
+}
+
+.container--browsers {
+  width: 960px;
+  max-width: 960px;
+  min-width: 960px;
+}

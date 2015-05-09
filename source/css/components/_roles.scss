@@ -1,0 +1,26 @@
+
+
+.role-img {
+  display: block;
+  background-image: url(../img/role/role.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  line-height: 0;
+  background-position: top center;
+  @include hidpi(1.5) {
+    background-image: url(../img/role/role_x2.png);
+  }
+}
+.role-img--foodit {
+  background-image: url(../img/role/foodit.png);
+}
+.role-img--paulo-giannis {
+  background-image: url(../img/role/paulo-giannis.jpg);
+}
+.role-img--molly-moo {
+  background-image: url(../img/role/molly-moo.jpg);
+}

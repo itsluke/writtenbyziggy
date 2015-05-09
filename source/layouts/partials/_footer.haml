@@ -1,0 +1,28 @@
+%footer.section.container.margin-top-90.separator-top.text-center
+  %ul.footer__nav.nav.nav--inline
+    %li
+      = link_to "My Blog", '/blog.html', class: 'btn btn--empty lowercase btn--icon btn--icon-large icon--nav-right', rel: 'fade'
+    %li
+      %a.btn.btn--empty.lowercase.btn--icon.btn--icon-large.icon--nav-right{:href => "https://twitter.com/zigandzigandzig", rel: 'fade'} My Twitter
+    %li
+      %a.btn.btn--empty.lowercase.btn--icon.btn--icon-large.icon--nav-right{:href => "https://uk.linkedin.com/in/ziggybracey", rel: 'fade'} My Linked-In
+
+#hire-us
+
+:javascript
+  window.HireUsENV = {"environment":"production","baseURL":"/","locationType":"hash","EmberENV":{"FEATURES":{}},"APP":{"rootElement":"#hire-us"},"HOST":"#{api_host}"};
+  window.EmberENV = window.HireUsENV.EmberENV;
+= javascript_include_tag 'main'
+
+= yield_content :footer
+
+:javascript
+   var _prum = [['id', '51a3b347abe53d8c7d000000'],
+              ['mark', 'firstbyte', (new Date()).getTime()]];
+   (function() {
+       var s = document.getElementsByTagName('script')[0]
+         , p = document.createElement('script');
+       p.async = 'async';
+       p.src = '//rum-static.pingdom.net/prum.min.js';
+       s.parentNode.insertBefore(p, s);
+   })();

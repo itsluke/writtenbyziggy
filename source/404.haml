@@ -1,0 +1,19 @@
+---
+title: This is not the page you're looking for
+---
+
+- content_for :footer do
+  = javascript_include_tag 'testimonials'
+
+%section.hero.margin-bottom-30
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %h1.margin-bottom-none
+        This is not the page you're looking for
+      %h6.section.margin-bottom-none.padding-top-none
+        It seems the page you were looking for has disappeared
+
+      %div.section.separator-top
+        %div.container
+          %div.span-5
+            %a.btn.btn--primary.btn--icon{:href => "/"} To the homepage

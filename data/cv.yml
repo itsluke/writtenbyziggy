@@ -1,0 +1,64 @@
+roles:
+  -
+    slug: foodit
+    name: FOODit
+    sub_title: |
+      Helping Eradicating Terrible Meals
+    location: London, UK
+    team_size: 20-26 employees
+    date_range: September 2014 – Present
+
+    position: Copywriter & Product Development
+    skills: Copywriting, Reviewer, Trend Analysis, Product Managment, Research
+    small_image: role/foodit.png
+    meta_title: "FOODit | Ziggy Bracey"
+    intro: |
+      I joined the FOODit team as employee #8 and have been working hard with them to define tone of voice, devise their newsletter strategy and help launch Central Dish.
+    body: |
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Re mihi non aeque satisfacit, et quidem locis pluribus. At multis malis affectus. Duo Reges: constructio interrete. Quo modo autem optimum, si bonum praeterea nullum est? Quid, quod res alia tota est? Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico?
+
+    google_plus: https://plus.google.com/115074148252317999654
+    twitter: "@fooditfood"
+
+  -
+    slug: paulo-giannis
+    name: Paulo Giannis
+    sub_title: |
+      Contemporary Italian restaurant and bar.
+    location: Lancaster, UK
+    team_size: 6-10
+    date_range: October 2013 – April 2014
+
+    position: Commis Chef
+    skills: Cheffing, Recipie Creation, Social media, Seasonal Menus
+    small_image: role/paulo-giannis.jpg
+    meta_title: "Paulo Giannis | Ziggy Bracey"
+    intro: |
+      Although an unusual career move, I took on this position to develop my understanding of food, inform my writing and pursue my passion for food.
+    body: |
+      Social media management
+      Developing recipes for weekly specials and seasonal menus
+      Preparing and cooking food during service
+
+  -
+    slug: molly-moo
+    name: Molly Moo Dairy Free
+    sub_title: |
+      Specialist range of dairy free mini meals for babies and toddlers.
+    location: Lancaster, UK
+    team_size: "3"
+    date_range: June 2013 – August 2013
+
+    position: Commis Chef
+    skills: Cheffing, Recipie Creation, Prepping
+    small_image: role/molly-moo.jpg
+    meta_title: "Paulo Giannis | Ziggy Bracey"
+    intro: |
+      Throughout my time at this specialist baby food company, I worked independently to develop brand awareness, generating promotional material in keeping with the existing brand profile and voice.
+    body: |
+      During this time I:
+        researched the consumer and
+        social media
+        cook book
+        website, blog and newsletter content
+        created the sourdough campaign on the blog and twitter

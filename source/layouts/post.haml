@@ -1,0 +1,56 @@
+- content_for :head do
+  %meta{itemprop: 'datePublished', content: current_article.date.strftime("#{current_article.date.day.ordinalize} %B %Y")}
+
+= wrap_layout :layout do
+  %article.margin-bottom-60{itemscope: "", itemtype: "http://schema.org/BlogPosting"}
+    %div.hero.hero--fixed-height
+      %div.fixed--bottom
+        %div.section.container.padding-bottom-none
+          %h1{itemprop: "name headline"}= current_article.title
+
+          %div.section.separator-top
+            %div.container
+              %div.span-2.meta-details{itemprop: "author", itemscope: "", itemtype: "http://schema.org/Person"}
+                %strong Posted by
+
+                %em{itemprop: "name"}
+                  - posted_by = current_article.metadata[:page]['post_by']
+                  - matched_user = data.team.members.select{|m| "#{m.first_name} #{m.last_name}".downcase == posted_by.downcase}.first
+                  - if matched_user
+                    = link_to posted_by, "/team/#{matched_user.slug}"
+                  - else
+                    = posted_by
+
+              %div.span-2.meta-details
+                %strong Post date
+                %em{itemprop: "datePublished"}= current_article.date.strftime("#{current_article.date.day.ordinalize} %B %Y")
+              %div.span-8.meta-details
+                %strong Summary
+                %em= current_article.metadata[:page]['summary']
+
+    %div.section.container{itemprop: "articleBody"}
+      %div.container--small.container--left
+        %p.p--intro= current_article.metadata[:page]['intro']
+
+      %div.container--vsmall.container--left
+        = yield
+
+  / blog.articles are indexed newest->oldest
+  - current_index = blog.articles.index(current_resource)
+  - if current_index > 0
+    - next_post = blog.articles[current_index-1]
+    %section.section.container
+      %div.span-2
+        = link_to 'Next post', next_post, class: 'btn btn--primary btn--full btn--icon icon--right'
+      %div.span-10.details.meta-details
+        %strong= next_post.metadata[:page]['title']
+        %em= next_post.metadata[:page]['summary']
+
+  - if current_index+1 < blog.articles.length
+    - prev_post = blog.articles[current_index+1]
+    %section.section.container.padding-top-none
+      %div.span-2
+        = link_to 'Previous', prev_post, class: 'btn btn--secondary btn--full btn--previous'
+      %div.span-10.details.meta-details
+        %strong= prev_post.metadata[:page]['title']
+        %em= prev_post.metadata[:page]['summary']

@@ -1,0 +1,54 @@
+---
+title: Simple as Milk's work
+description: We love what we do, and that passion shows through our work.
+---
+%section.hero
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %h1 If it's a challenge I'm happy
+
+      %div.section.separator-top
+
+        %p.p--intro Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec para/doca illi, nos admirabilia dicamus. At iam decimum annum in spelunca iacet. Duo Reges: constructio interrete. Quod non faceret, si in voluptate summum bonum poneret.
+
+        %div.container
+          %div.span-5
+            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#learnmore"} Learn more
+
+%section.section.container.container--large#learnmore
+  - data.cv.roles.each do |role|
+    %article.section.container
+      %div.section.container.padding-bottom-none
+        %div.media.section
+          %div.img
+            %span{class: "role-img role-img--#{role.slug}"}
+          %div.bd
+            %h1.margin-none
+              = role.name
+            %h2.margin-none.font-weight-500.subtext-color
+              = role.sub_title
+
+        %div.section.separator-top
+          %div.container
+            %div.span-5.meta-details
+              %strong Role
+              %em= role.position
+            - if !role.location.empty?
+              %div.span-2.meta-details
+                %strong Location
+                %em= role.location
+            - if !role.team_size.empty?
+              %div.span-2.meta-details
+                %strong Company Size
+                %em= role.team_size
+            - if !role.date_range.empty?
+              %div.span-3.meta-details
+                %strong Dates
+                %em= role.date_range
+
+    %section.container
+      %div.span-2
+        = link_to 'More Info', "/cv/#{role.slug}", class: 'btn btn--primary btn--full btn--icon icon--right'
+    / %div.span-10.details.meta-details
+    /   %strong= role.name
+    /   %em= role.sub_title

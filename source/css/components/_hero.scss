@@ -1,0 +1,92 @@
+.hero {
+  padding-top: $padding-section*4;
+  position: relative;
+  width: 100%;
+  height: calc(100%);
+  background-color: lighten($color-primary,18%);
+  // @include linear-gradient(#b3e1ea,#6ebcce);
+  // background-image: url(../img/backgrounds/flowers.jpg);
+  margin-bottom: $padding-section*3;
+  @include rem(min-height, 60rem);
+  @include rem(max-height, 80rem);
+
+  @media only screen
+    and (max-device-width : 600px)
+    and (orientation : portrait)
+  {
+    @include rem(max-height, 70rem);
+  }
+
+  .hero_image_overlay {
+    // $gradFrom: rgba(#b3e1ea,0.6);
+    // $gradTo: rgba(#6ebcce,0.84);
+    $gradFrom: rgba(lighten($color-primary,18%),0.6);
+    $gradTo: rgba(lighten($color-primary,18%),0.84);
+    @include linear-gradient($gradFrom 10%, $gradTo 70%);
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px
+  }
+
+  h1 {
+    margin: $padding-section 0;
+    @media screen and (min-device-width : 600px) {
+      transform: translateY(120px);
+      opacity: 0;
+      @include animation(glide-up $timing-longer forwards ease);
+      @include animation-delay($timing-normal);
+    }
+
+  }
+  h1, p {
+    @include rem(max-width, 80rem);
+  }
+  p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  h2 {
+    @media screen and (min-device-width : 600px) {
+      opacity: 0;
+      @include animation(fade-in $timing-longer forwards cubic-bezier(0.6, -0.28, 0.735, 0.045));
+      @include animation-delay($timing-normal);
+    }
+  }
+  .separator-top {
+    @media screen and (min-device-width : 600px) {
+      transform: translateY(40px);
+      opacity: 0;
+      @include animation(glide-up $timing-normal forwards ease);
+      @include animation-delay($timing-short);
+    }
+  }
+  .role-img {
+    @media screen and (min-device-width : 600px) {
+      @include animation(zoom $timing-longer forwards cubic-bezier(0.6, -0.28, 0.735, 0.045));
+      @include animation-delay($timing-long);
+    }
+  }
+}
+
+.hero_image {
+  // background: rgba($color-primary,1) url(../img/backgrounds/coffee.jpg);
+  // background: rgba($color-primary,1) url(../img/backgrounds/coffee2.jpg);
+  // background: rgba($color-primary,1) url(../img/backgrounds/bed.jpg);
+  // background: rgba($color-primary,1) url(../img/backgrounds/books.jpg);
+  // background: rgba($color-primary,1) url(../img/backgrounds/desk.jpg);
+  background: rgba($color-primary,1) url(../img/backgrounds/desk2.jpg);
+  // background: rgba($color-primary,1) url(../img/backgrounds/market.jpg);
+  // background: rgba($color-primary,1) url(../img/backgrounds/table.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero--fixed-height {
+  height: 500px;
+  min-height: 500px;
+  margin-bottom: $padding-section*1;
+}

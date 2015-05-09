@@ -1,0 +1,198 @@
+- project_id = current_page.url.gsub('/', '').gsub('case-studies', '').underscore
+- project = data.case_studies["#{project_id}"]
+
+%section.container
+  
+  %div.section.container.container--small
+    = image_tag 'illustrations/process--shipping.png', width: 330, class: 'margin-auto rounded'
+    %p.text-center Leading image if required
+
+  %div.section.container.container--medium
+    %h2.text-center Example Block with the 3 content types, title, intro and paragraph text
+    %p.p--intro.text-center
+      Sweet roll donut brownie toffee gummies. Soufflé croissant bear claw bonbon icing marshmallow candy cake. Soufflé danish lollipop wafer toffee marshmallow macaroon brownie pie.
+    %div.container.container--vsmall
+      %p Icing bear claw pudding jelly. Cake muffin candy danish jelly-o brownie lollipop danish tiramisu. Carrot cake chocolate cake cheesecake chocolate bar gummi bears candy canes jelly beans liquorice. Marzipan apple pie cheesecake. 
+      %p Jelly-o gummies dragée marzipan. Sweet roll cheesecake jujubes. Dessert oat cake marzipan cheesecake chupa chups.
+      %p Bonbon brownie danish chocolate tart carrot cake muffin muffin dragée. Chocolate bar gingerbread croissant danish jelly sweet roll cupcake. Sugar plum marzipan brownie.
+      %div.section.text-center
+        %a.btn.btn--primary{href: "http://unroll.me"} Visit Example.com
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span A quote from the client themselves
+    %div.container.container--medium
+      %blockquote.section.quote
+        %p= project.quote
+        %cite 
+          — 
+          = "#{project.quote_by}, #{project.client}"
+
+  %hr
+
+  %div.section.container.container--medium
+    %h2.text-center Example Block with the 3 content types, title, intro and paragraph text
+    %p.p--intro.text-center
+      Sweet roll donut brownie toffee gummies. Soufflé croissant bear claw bonbon icing marshmallow candy cake. Soufflé danish lollipop wafer toffee marshmallow macaroon brownie pie.
+    %div.container.container--vsmall
+      %p Icing bear claw pudding jelly. Cake muffin candy danish jelly-o brownie lollipop danish tiramisu. Carrot cake chocolate cake cheesecake chocolate bar gummi bears candy canes jelly beans liquorice. Marzipan apple pie cheesecake. 
+      %p Jelly-o gummies dragée marzipan. Sweet roll cheesecake jujubes. Dessert oat cake marzipan cheesecake chupa chups.
+      %p Bonbon brownie danish chocolate tart carrot cake muffin muffin dragée. Chocolate bar gingerbread croissant danish jelly sweet roll cupcake. Sugar plum marzipan brownie.
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Colors
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %span.case-study__color{style: "background-color: #4C6E9B"}
+      %span.case-study__color{style: "background-color: #C9963C"}
+      %span.case-study__color{style: "background-color: #E7A8A3"}
+      %span.case-study__color{style: "background-color: #9B574C"}
+      %span.case-study__color{style: "background-color: #383838"}
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %span.case-study__color{style: "background-color: #cccccc"}
+      %span.case-study__color{style: "background-color: red"}
+      %span.case-study__color{style: "background-color: blue"}
+      %span.case-study__color{style: "background-color: transparent"}
+      %span.case-study__color{style: "background-color: transparent"}
+
+  %section.section.text-center
+    %h3.h5.uppercase.h--seporator
+      %span Logo Marks
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 160, height: 160, class: 'rounded'
+      %div
+        %img{src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAHaTzTgAAAAKSURBVHgBY2AAAAACAAFzdQEYAAAAAElFTkSuQmCC", width: "160", height: "160"}
+      %div
+        %img{src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAHaTzTgAAAAKSURBVHgBY2AAAAACAAFzdQEYAAAAAElFTkSuQmCC", width: "160", height: "160"}
+
+  %section.section
+    %h3.h5.uppercase.h--seporator.text-center
+      %span Typography Choices
+    %div.section
+      = image_tag 'case-studies/example/typography2.png'
+      %h6 Chosen for its classic nature
+    %div.section
+      = image_tag 'case-studies/example/typography1.png'
+      %h6 Chosen for something else
+
+
+
+  %hr
+
+  %div.section.container
+    %div.container.container--medium
+      %h2.text-center Illustrations
+      %p.p--intro.text-center Sweet roll donut brownie toffee gummies. Soufflé croissant bear claw bonbon icing marshmallow candy cake. Soufflé danish lollipop wafer toffee marshmallow macaroon brownie pie.
+
+  %section.section.text-center
+    %div.section.padding-top-none.flexbox.flexbox--justify
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 280, height: 280, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 280, height: 280, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 280, height: 280, class: 'rounded'
+    %div.section.flexbox.flexbox--justify
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+      %div
+        = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded'
+  %hr
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.container.container--medium
+      = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'margin-auto rounded'
+      %h2.text-center Responsively awesome
+      %p.p--intro.text-center All pages were produced to work across all devices and screen sizes.
+
+    %div.container.container--browsers
+      %div.section.padding-bottom-none.relative
+        %div.browser.browser--full.browser--width-900
+          = image_tag 'case-studies/example/home.jpg', width: 900
+        %div.browser.browser--full.browser--iphone.browser--iphone-right
+          = image_tag 'case-studies/example/main-mobile.jpg', width: 320
+
+  %div.container.container--large.separator-bottom.relative
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container.container--large.separator-bottom
+    %div.section.container.container--medium
+      = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'margin-auto rounded'
+      %h2.text-center Application overview
+      %p.p--intro.text-center Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim laborum.
+      %div.container.container--vsmall
+        %p Icing bear claw pudding jelly. Cake muffin candy danish jelly-o brownie lollipop danish tiramisu. Carrot cake chocolate cake cheesecake chocolate bar gummi bears candy canes jelly beans liquorice. Marzipan apple pie cheesecake. 
+        %p Jelly-o gummies dragée marzipan. Sweet roll cheesecake jujubes. Dessert oat cake marzipan cheesecake chupa chups.
+        %p Bonbon brownie danish chocolate tart carrot cake muffin muffin dragée. Chocolate bar gingerbread croissant danish jelly sweet roll cupcake. Sugar plum marzipan brownie.
+
+    %div.section.padding-bottom-none.relative.clearfix.relative{style: "padding-top: 400px"}
+      %div.browser.browser--full.browser--width-900.pull-right.browser--zindex-top
+        = image_tag 'case-studies/example/Individual-Listing2.jpg', width: 900
+      %div.browser-container.separator-bottom.browser--left
+        %div.browser.browser--full
+          = image_tag 'case-studies/example/listing-active-pin-hover.jpg', width: 900
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.container.container--medium
+      = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'margin-auto rounded'
+      %h2.text-center It's all in the details
+      %p.p--intro.text-center Jelly-o gummies dragée marzipan. Sweet roll cheesecake jujubes. Dessert oat cake marzipan cheesecake chupa chups.
+
+    %div.container.separator-bottom
+      %div.section.padding-bottom-none.relative
+        %div.browser.browser--full.browser--width-900.margin-auto
+          = image_tag 'case-studies/example/Listing-Filter.jpg', width: 900
+
+    %div.section.container.container--medium
+      = image_tag 'case-studies/example/login.png', class: 'section margin-auto'
+
+    %div.section.container.separator-bottom.padding-top-none
+      %div.section.flexbox.flexbox--justify.padding-top-none
+        %div
+          = image_tag 'case-studies/example/detail-map.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-dropdown.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-share.png', width: 290, height: 290, class: 'detail-zoom'
+      %div.section.flexbox.flexbox--justify
+        %div
+          = image_tag 'case-studies/example/detail-checkin.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-form.png', width: 290, height: 290, class: 'detail-zoom'
+        %div
+          = image_tag 'case-studies/example/detail-search.png', width: 290, height: 290, class: 'detail-zoom'
+
+%section.section.padding-bottom-none.margin-bottom-60.overflow-hidden
+  %div.container
+    %div.container.container--medium
+      = image_tag 'illustrations/process--shipping.png', width: 120, height: 120, class: 'rounded margin-auto'
+      %h2.text-center Interactions
+      %p.p--intro.text-center Jelly-o gummies dragée marzipan. Sweet roll cheesecake jujubes. Dessert oat cake marzipan cheesecake chupa chups.

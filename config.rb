@@ -1,7 +1,5 @@
 require 'pry'
 
-activate :sitemap, hostname: "http://penned.by"
-
 activate :livereload
 activate :directory_indexes
 activate :asset_hash, exts: ['.css', '.js']
@@ -22,7 +20,7 @@ page "/sitemap.xml", layout: false
 ###
 # Sitemap settings
 ###
-activate :sitemap, hostname: "http://simpleasmilk.com"
+activate :sitemap, hostname: "http://writtenbyziggy.com"
 
 activate :livereload
 activate :directory_indexes
@@ -33,7 +31,7 @@ set :js_dir, 'js'
 set :images_dir, 'img'
 
 set :protocol, 'http://'
-set :host, 'penned.by'
+set :host, 'writtenbyziggy.com'
 set :port, '80'
 
 helpers do
@@ -105,6 +103,8 @@ configure :build do
       ignore "/case-studies/#{id.dasherize}.html"
     end
   end
+  ignore "/role.html"
+
 end
 
 page "/case-studies/*", layout: 'layouts/case-study'
@@ -112,8 +112,9 @@ page "/blog/*", layout: 'layouts/post'
 page "/contact"
 
 data.cv.roles.each do |role|
-  page "/cv/#{role.slug}.html", proxy: "role.html", locals: { role: role }
+  page "/cv/#{role.slug}.html", proxy: "role.html", locals: { role: role }, directory_index: false
 end
+
 
 set :latest_role, "/cv/#{data.cv.roles.first.slug}"
 

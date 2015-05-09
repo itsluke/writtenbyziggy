@@ -1,7 +1,7 @@
 -# Data Setup -----------------------------------------------------------------
 
-- default_title = "Simple as Milk - A User Experience Agency"
-- default_description = "It's data that makes a beautiful experience and it's personality that makes that experience human. You guessed it; we design and build user experiences."
+- default_title = "Ziggy Bracey"
+- default_description = "I’m a content strategist and copywriter with skills in product management, looking for an join an exciting new start up where I can combining my writing skills with my love of food."
 
 - @title = yield_content(:title).presence || current_page.data.title || default_title
 - @description = (yield_content(:meta_description).presence || current_page.data.description || default_description)
@@ -9,18 +9,11 @@
 - @author = {}
 - if current_article.present?
   - @author[:name] = current_article.metadata[:page]['post_by']
-  - if @author[:name].present?
-    - matched_user = data.team.members.select{|m| "#{m.first_name} #{m.last_name}".downcase == @author[:name].downcase}.first
-    - if matched_user
-      - @author[:team_member] = matched_user
-      - @author[:google_plus] = matched_user.google_plus
-      - @author[:twitter] = matched_user.twitter
 - else
-  - @author[:name] = 'Simple as Milk'
-  - @author[:google_plus] = 'https://plus.google.com/108834069515840282084'
-  - @author[:twitter] = '@simpleasmilk'
+  - @author[:name] = 'Ziggy Bracey'
+  - @author[:twitter] = '@zigandzigandzig'
 
-- default_image = image_url('og/simpleasmilk.png')
+- default_image = image_url('og/default.png')
 - if current_article.present?
   - @frontmatter_image = current_article.metadata[:page]['og_image']
 - @image = yield_content(:og_image).presence || current_page.data.og_image || @frontmatter_image || default_image
@@ -31,7 +24,7 @@
 %title= @title
 %meta{ name: 'description', content: @description }
 
-%link{ rel: "publisher", href: "http://plus.google.com/105559728573291365462" }
+/ %link{ rel: "publisher", href: "http://plus.google.com/105559728573291365462" }
 
 %meta{ name: 'author', content: @author[:name] }
 %link{ rel: 'author', href: @author[:google_plus] }
@@ -50,8 +43,6 @@
 
 - if current_article.present?
   %meta{ property: 'og:type', content: 'blog'}
-- elsif current_resource.url.include? '/team/'
-  %meta{ property: 'og:type', content: 'profile'}
 - else
   %meta{ property: 'og:type', content: 'website'}
 
@@ -66,9 +57,9 @@
 // Twitter Cards Meta
 
 %meta{ property: 'og:twitter:card', content: 'summary_large_image'}
-%meta{ property: 'og:twitter:site', content: '@simpleasmilk'}
+%meta{ property: 'og:twitter:site', content: '@zigandzigandzig'}
 %meta{ property: 'og:twitter:creator', content: @author[:twitter]}
-%meta{ property: 'og:twitter:url', content: 'http://simpleasmilk.com'}
+%meta{ property: 'og:twitter:url', content: 'http://writtenbyziggy'}
 %meta{ property: 'og:twitter:title', content: @title}
 %meta{ property: 'og:twitter:description', content: @description}
 %meta{ property: 'og:twitter:image', content: @image}

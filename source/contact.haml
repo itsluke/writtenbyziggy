@@ -12,9 +12,7 @@ description: Hi nice to meet you, I'm Ziggy and this is what I've been working o
         %p.p--intro= data.contact.message
 
         %div.container
-          %div.span-2
-            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#learnmore"} Learn more
-          %div.span-7
+          %div.span-12
             - data.contact.details.each do |type, contact|
               %div.span-2.meta-details
                 %strong= type

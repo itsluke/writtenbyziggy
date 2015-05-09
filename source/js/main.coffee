@@ -1,1 +1,1 @@
-#= require ../../components/jquery/dist/jquery
+#= require jquery/dist/jquery.min.js

@@ -81,4 +81,4 @@ quote:
   %blockquote.section.quote
     %p= current_page.data.quote.content
     %cite — #{current_page.data.quote.from}
-  %a.btn.btn--large.btn--primary{href: '#/contact'} Contact Me
+  = link_to "Contact Me", "/contact.html", class: "btn btn--primary", rel: "fade"

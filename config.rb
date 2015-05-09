@@ -71,13 +71,6 @@ end
 configure :development do
   set :api_host, 'http://0.0.0.0:3000'
 end
-# configure :development do
-#   set :api_host, 'http://0.0.0.0:3000'
-#   if defined? Middleman::PreviewServer
-#     set :host, Middleman::PreviewServer.host
-#     set :port, Middleman::PreviewServer.port
-#   end
-# end
 
 # Build-specific configuration
 configure :build do
@@ -105,7 +98,7 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-  set :api_host, 'http://simpleasmilk-api.herokuapp.com'
+  set :api_host, 'http://recordmyhing.herokuapp.com'
 
   data.case_studies.each do |id, case_study|
     if case_study.published == false
@@ -116,6 +109,7 @@ end
 
 page "/case-studies/*", layout: 'layouts/case-study'
 page "/blog/*", layout: 'layouts/post'
+page "/contact"
 
 data.cv.roles.each do |role|
   page "/cv/#{role.slug}.html", proxy: "role.html", locals: { role: role }

@@ -1,0 +1,21 @@
+---
+title: Ziggy Bracey | Curriculum Vitae
+description: Hi nice to meet you, I'm Ziggy and this is what I've been working on.
+---
+%section.hero
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %h1= data.contact.title
+
+      %div.section.separator-top
+
+        %p.p--intro= data.contact.message
+
+        %div.container
+          %div.span-2
+            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#learnmore"} Learn more
+          %div.span-7
+            - data.contact.details.each do |type, contact|
+              %div.span-2.meta-details
+                %strong= type
+                %em= contact

@@ -11,7 +11,7 @@
       %li{class: ("header__nav__active" if current_page.url.match(/\/cv/i))}
         = link_to "Curriculum Vitae", "/cv.html", class: "btn btn--empty", rel: "fade"
       %li
-        %a.btn.btn--primary{href: "#/contact"} Contact Me
+        = link_to "Contact Me", "/contact.html", class: "btn btn--primary", rel: "fade"
 
 - if current_page.url == "/"
   / .container.logo.logo--main

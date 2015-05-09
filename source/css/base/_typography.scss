@@ -1,6 +1,16 @@
 /* Typography */
 /* --------------------------------------- */
 
+
+@font-face {font-family: 'Panton-Bold';src: url('../fonts/panton/2E2121_0_0.eot');src: url('../fonts/panton/2E2121_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/panton/2E2121_0_0.woff2') format('woff2'),url('../fonts/panton/2E2121_0_0.woff') format('woff'),url('../fonts/panton/2E2121_0_0.ttf') format('truetype'),url('../fonts/panton/2E2121_0_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'Panton-ExtraBold';src: url('../fonts/panton/2E2121_1_0.eot');src: url('../fonts/panton/2E2121_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/panton/2E2121_1_0.woff2') format('woff2'),url('../fonts/panton/2E2121_1_0.woff') format('woff'),url('../fonts/panton/2E2121_1_0.ttf') format('truetype'),url('../fonts/panton/2E2121_1_0.svg#wf') format('svg');}
+
+
+@font-face {font-family: 'Panton-Regular';src: url('../fonts/panton/2E2121_2_0.eot');src: url('../fonts/panton/2E2121_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/panton/2E2121_2_0.woff2') format('woff2'),url('../fonts/panton/2E2121_2_0.woff') format('woff'),url('../fonts/panton/2E2121_2_0.ttf') format('truetype'),url('../fonts/panton/2E2121_2_0.svg#wf') format('svg');}
+
+
 %full-box {
   width:100%; height:100%; padding: 0; margin: 0;
 }

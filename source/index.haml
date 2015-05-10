@@ -29,10 +29,6 @@ favorites:
   - title: Always Learning
     content: I enjoy nothing more than an excuse to shut myself away and learn something completely new.
 
-quote:
-  from: Rich, FOODit
-  content: |
-    Ziggy is an invaluble member of the team here, and Lorem ipsum dolor sit amet, consectetur adipiscing elit. Constructio interrete. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Qui-vere falsone, quaerere mittimus-dicitur...
 
 ---
 
@@ -81,8 +77,9 @@ quote:
           %p= favorite.title
           %em= favorite.content
 
-%section.section.container.container--medium.text-center
-  %blockquote.section.quote
-    %p= current_page.data.quote.content
-    %cite — #{current_page.data.quote.from}
-  = link_to "Contact Me", "/contact.html", class: "btn btn--primary", rel: "fade"
+- if !current_page.data.quote.nil?
+  %section.section.container.container--medium.text-center
+    %blockquote.section.quote
+      %p= current_page.data.quote.content
+      %cite — #{current_page.data.quote.from}
+    = link_to "Contact Me", "/contact.html", class: "btn btn--primary", rel: "fade"

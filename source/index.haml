@@ -70,12 +70,12 @@ favorites:
     %span= current_page.data.divider
 
 
-  %div.container.container--medium
-    %ul.nav.flexbox.flexbox--justify.section
-      - current_page.data.favorites.each do |favorite|
-        %li{:class => "span-#{(12 / current_page.data.favorites.count)}"}
-          %p= favorite.title
-          %em= favorite.content
+  / %div.container.container--medium
+  /   %ul.nav.flexbox.flexbox--justify.section
+  /     - current_page.data.favorites.each do |favorite|
+  /       %li{:class => "span-#{(12 / current_page.data.favorites.count)}"}
+  /         %p= favorite.title
+  /         %em= favorite.content
 
 - if !current_page.data.quote.nil?
   %section.section.container.container--medium.text-center

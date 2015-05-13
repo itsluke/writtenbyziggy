@@ -1,43 +1,14 @@
 ---
 title: Strategy, Copy & Food
 description: I'm Ziggy; I write and I eat, and I eat and I write.
-
-headline: I'm Ziggy; I write and I eat, and I eat and I write.
-sub_heading: Professional Tastemaker
-skills:
-  - main: Copywriting
-    sub: Medium & Long Form
-  - main: Content Strategy
-    sub: Brand Positioning & Tone
-  - main: Product Development
-    sub: User Research & Analysis
-
-about_me:
-  - I’m a content strategist and copywriter with skills in product management, looking to join an exciting start up where I can combine my love of food with my writing skills.
-
-  - I’ve worked with multiple brands to help them define the tone, voice and content of their copy across a range of platforms. Researching and profiling are key to my work, as it allows me to better understand the ‘why’ as well as the ‘how’. From here I use my skills in writing to turn high-level concepts into compelling medium and long form copy. I’ve also got experience managing teams, creating visual content and representing brands.
-
-divider: A Few Of My Favorite Things
-
-favorites:
-  - title: All The Food
-    content: From garlic custard snails to Szechwan mixed tendon stew, it's all delicious (apart from rice, yuck!).
-
-  - title: Virginia Woolf
-    content: I mean lets be honest what's not to love? I mean really! Lets not be silly.
-
-  - title: Always Learning
-    content: I enjoy nothing more than an excuse to shut myself away and learn something completely new.
-
-
 ---
 
 %section.hero
   %div.fixed--bottom
     %div.section.container.padding-bottom-none
-      %h1= current_page.data.headline
-      - if !current_page.data.sub_heading.blank?
-        %h2= current_page.data.sub_heading
+      %h1= data.home_page.headline
+      - if !data.home_page.sub_heading.blank?
+        %h2= data.home_page.sub_heading
 
       %div.section.separator-top
         %div.container
@@ -46,38 +17,38 @@ favorites:
 
           %div.span-7
             %div.span-4--of-12.meta-details
-              %strong= current_page.data.skills[0].main
-              %em= current_page.data.skills[0].sub
+              %strong= data.home_page.skills[0].main
+              %em= data.home_page.skills[0].sub
             %div.span-4--of-12.meta-details
-              %strong= current_page.data.skills[1].main
-              %em= current_page.data.skills[1].sub
+              %strong= data.home_page.skills[1].main
+              %em= data.home_page.skills[1].sub
             %div.span-4--of-12.meta-details
-              %strong= current_page.data.skills[2].main
-              %em= current_page.data.skills[2].sub
+              %strong= data.home_page.skills[2].main
+              %em= data.home_page.skills[2].sub
 
 %section.section.container.container--medium.text-center#aboutme
-  %p.p--intro= current_page.data.about_me[0]
+  %p.p--intro= data.home_page.about_me[0]
 
-  - current_page.data.about_me[1..-1].each do |paragraph|
+  - data.home_page.about_me[1..-1].each do |paragraph|
     %p.p--intro
       %em= paragraph
 
 
 %div.section.container.text-center.clearfix
   / %h3.h5.uppercase.h--seporator
-  /   %span= current_page.data.divider
+  /   %span= data.home_page.divider
 
 
   / %div.container.container--medium
   /   %ul.nav.flexbox.flexbox--justify.section
-  /     - current_page.data.favorites.each do |favorite|
-  /       %li{:class => "span-#{(12 / current_page.data.favorites.count)}"}
+  /     - data.home_page.favorites.each do |favorite|
+  /       %li{:class => "span-#{(12 / data.home_page.favorites.count)}"}
   /         %p= favorite.title
   /         %em= favorite.content
 
-- if !current_page.data.quote.nil?
+- if !data.home_page.quote.nil?
   %section.section.container.container--medium.text-center
     %blockquote.section.quote
-      %p= current_page.data.quote.content
-      %cite — #{current_page.data.quote.from}
+      %p= data.home_page.quote.content
+      %cite — #{data.home_page.quote.from}
     = link_to "Contact Me", "/contact.html", class: "btn btn--primary", rel: "fade"

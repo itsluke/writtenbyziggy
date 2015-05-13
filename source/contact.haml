@@ -1,19 +1,19 @@
 ---
-title: Contact Me
-description: Hi nice to meet you, I'm Ziggy and this is what I've been working on.
+title: #{data.contact_page.meta_title}
+description: #{data.contact_page.meta_description}
 ---
 %section.hero
   %div.fixed--bottom
     %div.section.container.padding-bottom-none
-      %h1= data.contact.title
+      %h1= data.contact_page.title
 
       %div.section.separator-top
 
-        %p.p--intro= data.contact.message
+        %p.p--intro= data.contact_page.message
 
         %div.container
           %div.span-12
-            - data.contact.details.each do |type, contact|
+            - data.contact_page.details.each do |type, contact|
               %div.span-2.meta-details
                 %strong= type
                 %em= contact

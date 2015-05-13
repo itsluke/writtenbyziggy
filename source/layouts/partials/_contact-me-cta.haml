@@ -1,4 +1,4 @@
 %div.section.hireus-cta.container.container--medium.text-center.clearfix
   %blockquote.section.quote
-    %p.font-style--normal We’re here to produce a product we’re all proud of. Wanna build something beautiful together?
-  = link_to "Contact Me", "/contact.html", class: "btn btn--primary", rel: "fade"
+    %p.font-style--normal= data.contact_page.signoff
+  = link_to data.contact_page.contact_btn, "/contact.html", class: "btn btn--primary", rel: "fade"

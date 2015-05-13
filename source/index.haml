@@ -1,6 +1,6 @@
 ---
-title: Strategy, Copy & Food
-description: I'm Ziggy; I write and I eat, and I eat and I write.
+title: #{data.home_page.meta_title}
+description: #{data.home_page.meta_description}
 ---
 
 %section.hero
@@ -13,7 +13,7 @@ description: I'm Ziggy; I write and I eat, and I eat and I write.
       %div.section.separator-top
         %div.container
           %div.span-5
-            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#aboutme"} About Me
+            %a.btn.btn--primary.btn--icon.btn--icon-right.icon--down{:href => "#aboutme"}= data.home_page.more_btn
 
           %div.span-7
             %div.span-4--of-12.meta-details
@@ -33,18 +33,18 @@ description: I'm Ziggy; I write and I eat, and I eat and I write.
     %p.p--intro
       %em= paragraph
 
-
 %div.section.container.text-center.clearfix
-  / %h3.h5.uppercase.h--seporator
-  /   %span= data.home_page.divider
+  - if data.home_page.show_favorites
+    %h3.h5.uppercase.h--seporator
+      %span= data.home_page.divider
 
 
-  / %div.container.container--medium
-  /   %ul.nav.flexbox.flexbox--justify.section
-  /     - data.home_page.favorites.each do |favorite|
-  /       %li{:class => "span-#{(12 / data.home_page.favorites.count)}"}
-  /         %p= favorite.title
-  /         %em= favorite.content
+    %div.container.container--medium
+      %ul.nav.flexbox.flexbox--justify.section
+        - data.home_page.favorites.each do |favorite|
+          %li{:class => "span-#{(12 / data.home_page.favorites.count)}"}
+            %p= favorite.title
+            %em= favorite.content
 
 - if !data.home_page.quote.nil?
   %section.section.container.container--medium.text-center

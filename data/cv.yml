@@ -15,13 +15,12 @@ roles:
     meta_title: "FOODit | Ziggy Bracey"
     intro: |
       I joined the FOODit team as employee #8 and have been working hard with them to define product voice, devise their newsletter and content strategy and help launch Central Dish.
-    body:
-      - |
-        CentralDish is an exciting, new restaurant marketplace that helps users find their perfect dish, whenever and wherever they are.
-      - |
-        A big part of my job has been definining the needs of these users so that we can deliver the kind of information they couldn't get elsewhere, all in ways that are accessable and engaging.
-      - |
-        With such a large potential userbase, I've been involved in leading research and interviews with people and restaurants at all levels. This has helped us hone our USPs and delevop our strategy.
+    markdown_content: |
+      CentralDish is an exciting, new restaurant marketplace that helps users find their perfect dish, whenever and wherever they are.
+
+      A big part of my job has been definining the needs of these users so that we can deliver the kind of information they couldn't get elsewhere, all in ways that are accessable and engaging.
+
+      With such a large potential userbase, I've been involved in leading research and interviews with people and restaurants at all levels. This has helped us hone our USPs and delevop our strategy.
     twitter: "@fooditfood"
 
   -
@@ -39,8 +38,8 @@ roles:
     meta_title: "Paulo Giannis | Ziggy Bracey"
     intro: |
       Although an unusual career move, I took on this position to develop my understanding of and pursue my passion for food.
-    body:
-      - With no prior experience in a professional kitchen, I moved from prepping food to the starters and desserts section where I devised weekly specials, refined my palate and learnt a wide range of cooking techniques.
+    markdown_content: |
+      With no prior experience in a professional kitchen, I moved from prepping food to the starters and desserts section where I devised weekly specials, refined my palate and learnt a wide range of cooking techniques.
   -
     slug: molly-moo
     name: Molly Moo Dairy Free Baby Food
@@ -55,8 +54,8 @@ roles:
     small_image: role/molly-moo.jpg
     meta_title: "Molly Moo Dairy | Ziggy Bracey"
     intro: At this specialist baby food startup, I worked with the founder to define the voice and tone of the brand, decide which marketing channels would be most effective and create content accordingly.
-    body:
-      - During this time I profiled customers to define content strategy and voice for a cookbook, newsletters, the website and a blog.
+    markdown_content: |
+      During this time I profiled customers to define content strategy and voice for a cookbook, newsletters, the website and a blog.
 
 
 

@@ -42,8 +42,7 @@
         %strong Skills
         %em= role.skills
     %div.container.container--vsmall.container--left
-      - role.body.each do |paragraph|
-        =simple_format paragraph
+      = markdown_render(role.markdown_content)
 
 
 - if current_index+1 < data.cv.roles.length

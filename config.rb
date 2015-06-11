@@ -111,6 +111,7 @@ configure :build do
   end
 
   ignore "/role.html"
+  ignore "/for.html"
 
 end
 

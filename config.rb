@@ -110,6 +110,7 @@ configure :build do
     end
   end
 
+  ignore "/for.html"
   ignore "/role.html"
 
 end
@@ -123,8 +124,7 @@ data.cv.roles.each do |role|
 end
 
 data.for.each do |id, page|
-  puts "for page - /for/#{id.dasherize}/#{page.slug}.html"
-  page "/for/#{id.dasherize}/#{page.slug}.html", proxy: "for.html", locals: { page: page }
+  page "/for/#{id.dasherize}/#{page.slug}.html", proxy: "for.html", locals: { page: page }, directory_index: false
 end
 
 set :latest_role, "/cv/#{data.cv.roles.first.slug}"

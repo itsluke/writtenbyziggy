@@ -104,6 +104,12 @@ configure :build do
     end
   end
 
+  data.for.each do |id, page|
+    if page.published == false
+      ignore "/for/#{id.dasherize}/#{page.slug}.html"
+    end
+  end
+
   ignore "/role.html"
 
 end
@@ -114,6 +120,11 @@ page "/contact"
 
 data.cv.roles.each do |role|
   page "/cv/#{role.slug}.html", proxy: "role.html", locals: { role: role }
+end
+
+data.for.each do |id, page|
+  puts "for page - /for/#{id.dasherize}/#{page.slug}.html"
+  page "/for/#{id.dasherize}/#{page.slug}.html", proxy: "for.html", locals: { page: page }
 end
 
 set :latest_role, "/cv/#{data.cv.roles.first.slug}"

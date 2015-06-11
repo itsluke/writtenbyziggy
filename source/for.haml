@@ -1,0 +1,14 @@
+- content_for(:title, page.meta_title)
+- content_for(:sub_title, page.sub_title)
+- content_for(:og_image, image_url("og/#{page.slug}.png"))
+
+%section.hero.hero--fixed-height
+  %div.fixed--bottom
+    %div.section.container.padding-bottom-none
+      %div.media.section
+        %div.img
+        %div.bd
+          %h1.margin-none
+            = page.for
+          %h2.margin-none.font-weight-500.subtext-color
+            = page.subject

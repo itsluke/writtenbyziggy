@@ -8,6 +8,22 @@ Time.zone = "GMT"
 
 set :haml, format: :html5
 
+class MarkdownSupport < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+  end
+
+  helpers do
+    def markdown_render(markdown_text)
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+      return markdown.render(markdown_text)
+    end
+  end
+end
+
+::Middleman::Extensions.register(:markdown_support, MarkdownSupport)
+
+activate :markdown_support
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   blog.prefix = "blog"
@@ -110,6 +126,7 @@ configure :build do
     end
   end
 
+  ignore "/for.html"
   ignore "/role.html"
   ignore "/for.html"
 
@@ -124,8 +141,7 @@ data.cv.roles.each do |role|
 end
 
 data.for.each do |id, page|
-  puts "for page - /for/#{id.dasherize}/#{page.slug}.html"
-  page "/for/#{id.dasherize}/#{page.slug}.html", proxy: "for.html", locals: { page: page }
+  page "/for/#{id.dasherize}/#{page.slug}.html", proxy: "for.html", locals: { page: page }, directory_index: false
 end
 
 set :latest_role, "/cv/#{data.cv.roles.first.slug}"

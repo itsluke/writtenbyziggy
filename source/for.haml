@@ -12,3 +12,8 @@
             = page.for
           %h2.margin-none.font-weight-500.subtext-color
             = page.subject
+
+%article.section.container
+  %div.container--medium.container--left
+    %div.container.container--vsmall.container--left
+      = markdown_render(page.markdown_content)

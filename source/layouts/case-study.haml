@@ -1,5 +1,5 @@
-- project_id = current_page.url.gsub('/', '').gsub('my-writing', '').underscore
-- project = data.writing_examples["#{project_id}"]
+- project_id = current_page.url.gsub('/', '').gsub('writing', '').underscore
+- project = data.writing["#{project_id}"]
 
 - content_for(:title, project.meta_title)
 - content_for(:meta_description, project.meta_description)

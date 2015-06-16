@@ -6,7 +6,7 @@
     %nav.nav.nav--inline.header__nav.pull-right
       %li{class: ("header__nav__active" if current_page.url == "/")}
         = link_to "Hello", "/", class: "btn btn--empty", rel: "fade"
-      / %li{class: ("header__nav__active" if current_page.url.match(/\/my-writing/i))}
+      / %li{class: ("header__nav__active" if current_page.url.match(/\/writing/i))}
       /   = link_to "My Writing", "/my-writing.html", class: "btn btn--empty", rel: "fade"
       %li{class: ("header__nav__active" if current_page.url.match(/\/cv/i))}
         = link_to "Curriculum Vitae", "/cv.html", class: "btn btn--empty", rel: "fade"

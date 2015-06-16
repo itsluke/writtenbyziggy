@@ -1,0 +1,26 @@
+published: false
+type: case_study
+date: 2014-01-06
+client: Example Client
+project: Example Project
+project_type: Copywriting, Example Skill, Example Skill
+meta_title: Example Meta Title
+meta_description: |
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum autem illo, impedit repellat quibusdam delectus molestiae, doloribus a, similique ratione expedita praesentium voluptatum doloremque unde. Voluptate amet, eveniet vero ab?
+intro: |
+  Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur elit.
+image: case-studies/example/home.jpg
+og_image: og/default.png
+description: |
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim atque soluta eveniet earum consequuntur facilis obcaecati, explicabo ad molestiae, repudiandae laudantium eum. Delectus et suscipit fuga possimus. Magnam, expedita saepe.
+quote: |
+  We’re here to produce a product we’re both proud of. Let’s become friends and build something beautiful
+quote_by: James
+preview_type: notepad
+test1:
+published: false
+type: testimonial
+quote: |
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique explicabo earum vero sit nobis deleniti sed accusantium distinctio cumque culpa, repellendus vitae ex asperiores officiis iusto reprehenderit fuga. Tempore, atque!
+quote_by: Test
+preview_type: browser

@@ -114,9 +114,9 @@ configure :build do
 
   set :api_host, 'http://recordmyhing.herokuapp.com'
 
-  data.writing_examples.each do |id, writing|
+  data.writing.each do |id, writing|
     if writing.published == false
-      ignore "/my-writing/#{id.dasherize}.html"
+      ignore "/writing/#{id.dasherize}.html"
     end
   end
 
@@ -132,7 +132,7 @@ configure :build do
 
 end
 
-page "/my-writing/*", layout: 'layouts/case-study'
+page "/writing/*", layout: 'layouts/case-study'
 page "/blog/*", layout: 'layouts/post'
 page "/contact"
 

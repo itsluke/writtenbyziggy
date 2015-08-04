@@ -6,7 +6,6 @@ use Rack::TryStatic,
   urls: %w[/],
   try: ['.html', 'index.html', '/index.html']
 
-
 run lambda{ |env|
   not_found_page = File.expand_path("../build/404.html", __FILE__)
   if File.exist?(not_found_page)

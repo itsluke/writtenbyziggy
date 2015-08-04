@@ -1,7 +1,7 @@
 .container {
   @include outer-container;
-  @include rem(max-width, 107rem); 
-  @include rem(min-width, 102.5rem); 
+  @include rem(max-width, 107rem);
+  @include rem(min-width, 102.5rem);
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
